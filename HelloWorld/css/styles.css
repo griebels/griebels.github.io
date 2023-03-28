@@ -1,0 +1,27 @@
+h1, h3, .h1, .h3 {
+  margin-bottom: 0.5rem;
+  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h1, .h1 {
+    font-size: 2.5rem;
+    color:#660000;
+}
+
+h2, .h2 {
+    font-size: 1rem;
+  }
+
+h3, .h3 {
+    font-size: 1.75rem;
+}
+
+
+#wow {
+    background-color: aliceblue;
+    color: #dc3545;
+    border: 1px solid #696969;
+    box-shadow: 2px 2px 1px black;
+}
