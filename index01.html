@@ -18,18 +18,68 @@
      <link rel="stylesheet" href="css/mystyles.css">
      <script src="js/myJS.js"></script>
 </head>
-<body style="background-color: rgb(211, 207, 201)">
-    <h1 style="color:goldenrod">A sandbox for testing</h1>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+    <div class="container">
+      <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">About</a>
+          </li>
+          <li class="nav-item">
+            <!-- <a class="nav-link" href="#">cv</a> -->
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              projects
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="index01.html" target="_blank">A sandbox for buttons</a></li>
+              <!-- <li><a class="dropdown-item" href="index02.html" target="_blank">A sandbox for drop-case letters</a></li> -->
+              <!-- <li><hr class="dropdown-divider"></li> -->
+              <li><a class="dropdown-item" href="index03.html" target="_blank">Translations, machine learning, and other cool things</a></li>
+              <li><a class="dropdown-item" href="index04.html" target="_blank">Some movies I've seen this year</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
+          </li>
+        </ul>
+        <form class="d-flex">
+          <!-- <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search"> -->
+          <!-- <button class="btn btn-outline-light" type="submit">Search</button> -->
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-3">
+    <h1>Sandbox Site for Practice</h1>
+    <h3>JavaScript and Buttons</h3>
+  </div>
+  
     <div class="container mt-5">
-      <button type="button" class="btn-dark" onclick="show_date_now()">Show full date and time</button>
+    <button type="button" class="btn-dark" onclick="show_date_now()">Show full date and time</button>
     </div>
     
-    <p id="datebtn">time is =</p>
-    
+    <div class="container mt-5">
+      
     <button type="button" onclick="time()">click to show the time</button>
-    
-    <p id="named">Sarah</p>
-    
+    <p id="datebtn">time is =</p>
+  </div>
+
+    <div class="container mt-5">
     <button type="button" class="btn-danger" onclick="disappear_word()">make Sarah disappear</button>
-</body>
+    <p id="named">Sarah</p>
+  </div>
+
+  <div class="container mt-5">
+  <h3>Drop-case letters</h3>
+</div>
+  </body>
 </html>

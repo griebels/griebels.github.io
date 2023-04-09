@@ -1,3 +1,30 @@
 body {
     background-color: rgb(211, 207, 201)
 }
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20pt;
+    color: rgb(87, 86, 86)
+}
+
+
+h3 {font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16pt;
+    color: goldenrod
+}
+
+p {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: grey
+}
+
+th {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: rgb(32, 32, 81)
+}
+
+td {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:rgb(64, 21, 103)
+}
