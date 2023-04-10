@@ -15,3 +15,8 @@ function disappear_word() {
     var theElement = document.getElementById("named");
     theElement.innerHTML = ""
 }
+
+function disappear_word2() {
+    var theElement = document.getElementById("named2");
+    theElement.style.display = 'none';
+}
