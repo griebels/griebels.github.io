@@ -16,7 +16,7 @@ h3 {font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 p {
     font-family:Georgia, 'Times New Roman', Times, serif;
-    color: grey
+    color: rgb(59, 38, 38)
 }
 
 th {
@@ -28,3 +28,14 @@ td {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color:rgb(64, 21, 103)
 }
+
+.firstcharacter {
+    color: rgb(98, 9, 38);
+    float: left;
+    font-family:'Times New Roman', Times, serif; 
+    font-size: 75px;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+  }

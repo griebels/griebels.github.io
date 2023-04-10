@@ -8,7 +8,7 @@ function time() {
         var timenow = + currentdate.getHours() + ":"  
                     + currentdate.getMinutes() + ":" 
                     + currentdate.getSeconds();
-          document.getElementById("datebtn").innerHTML = "time is ="+timenow;
+          document.getElementById("datebtn").innerHTML = "The time is now "+timenow;
         }
 
 function disappear_word() {
