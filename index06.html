@@ -21,10 +21,21 @@
     <!-- Bootstrap Icons CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 
+    <!-- Leaflet CSS and JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
+
+    <!-- Loading JS file that includes the wiki function -->
+    <script src="js/wikiAPI.js"></script>
     
     <title>DIGS 30005</title>
   </head>
-  <body>
+  <body onload="mapLoad()">
 
     <!-- wrappers for footer to stay in place -->
     <div id="page-container">
@@ -89,132 +100,109 @@
   </div>
 </nav>
 
-<!-- <div class="container mt-3">
-  <h1>Welcome</h1>
-</div> -->
-
-<div class="container-sm mt-3">
-</div>
-
-<!-- Carousel for photos -->
-<!-- <div class="container mt-4"> -->
-  <!-- <h1>Carousel</h1> -->
-  <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+<div class="container mt-4">
+    <h3>Map API</h3>
+    <div id="map"></div>
     </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="images/jerome.jpg" class="d-block w-30" alt="cookies" style="max-height: 100vh; max-width: 360vh; margin: auto;" >
-        <div class="carousel-caption d-none d-md-block">
-          <!-- <h3>St Jerome</h3>
-          <p>Patron saint of translators.</p> -->
+
+
+<div class="container mt-3">
+    <h3 id="title">Wiki API example</h3>
+    <!-- user input field -->
+    <form>
+        <div class="row">
+        <div class="col">
+            <input id="searchTerm" type="text" class="form-control" placeholder="Enter your search term.">
         </div>
-      </div>
-      <div class="carousel-item">
-        <img src="images/flower.JPG" class="d-block w-30" alt="flower" style="max-height: 100vh; max-width: 360vh; margin: auto;">
-        <div class="carousel-caption d-none d-md-block">
-          <!-- <h5>Flower</h5>
-          <p>A flower at the botanical garden.</p> -->
         </div>
-      </div>
-      <div class="carousel-item">
-        <img src="images/mountain.JPG" class="d-block w-30" alt="mountain" style="max-height: 100vh; max-width: 360vh; margin: auto;">
-        <div class="carousel-caption d-none d-md-block">
-          <!-- <h5>Mountain</h5>
-          <p>A mountain in the hills of Colorado.</p> -->
-        </div>
-      </div>
+    </form>
+    
+    
+    <!-- Button to submit search value and invoke js functions -->
+    <button type="submit" class="button btn-secondary my-3" onclick="wikiAPI()">Search</button>
+    
+    <!-- output from the js function loads here -->
+        <div class="container" id="wiki"></div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  
+
+
 
 <!-- Container for footer -->
 <div class="container mt-5">
 
 
-<!-- Footer!! -->
-</div>
-<footer id="footer">
-  <footer class="text-center text-white" style="background-color: rgb(240, 218, 209);">
-    <!-- Grid container -->
-    <div class="container pt-4">
-      <!-- Section: Social media -->
-      <section class="mb-4">
-        <!-- Facebook -->
-        <a
-          class="btn btn-link btn-floating btn-lg text-dark m-1"
-          href="#!"
-          role="button"
-          data-mdb-ripple-color="dark"
-          ><i class="bi bi-facebook"></i>            
-        </a>
-  
-        <!-- Twitter -->
-        <a
-          class="btn btn-link btn-floating btn-lg text-dark m-1"
-          href="#!"
-          role="button"
-          data-mdb-ripple-color="dark"
-          ><i class="bi bi-twitter"></i>
-        </a>
-  
-        <!-- Google -->
-        <a
-          class="btn btn-link btn-floating btn-lg text-dark m-1"
-          href="#!"
-          role="button"
-          data-mdb-ripple-color="dark"
-          ><i class="bi bi-google"></i>
-        </a>
-  
-        <!-- Instagram -->
-        <a
-          class="btn btn-link btn-floating btn-lg text-dark m-1"
-          href="#!"
-          role="button"
-          data-mdb-ripple-color="dark"
-          ><i class="bi bi-instagram"></i>
-        </a>
-  
-        <!-- Linkedin -->
-        <a
-          class="btn btn-link btn-floating btn-lg text-dark m-1"
-          href="#!"
-          role="button"
-          data-mdb-ripple-color="dark"
-          ><i class="bi bi-linkedin"></i>
-        </a>
-        <!-- Github -->
-        <a
-          class="btn btn-link btn-floating btn-lg text-dark m-1"
-          href="#!"
-          role="button"
-          data-mdb-ripple-color="dark"
-          ><i class="bi bi-github"></i>
-        </a>
-      </section>
-      <!-- Section: Social media -->
+    <!-- Footer!! -->
     </div>
-    <!-- Grid container -->
-  
-    <!-- Copyright -->
-    <div class="text-center text-light p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2023 Copyright: 
-      <a class="text-light" href="https://griebels.github.io">Sarah Griebel</a>
+    <footer id="footer">
+      <footer class="text-center text-white" style="background-color: rgb(240, 218, 209);">
+        <!-- Grid container -->
+        <div class="container pt-4">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="bi bi-facebook"></i>            
+            </a>
+      
+            <!-- Twitter -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="bi bi-twitter"></i>
+            </a>
+      
+            <!-- Google -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="bi bi-google"></i>
+            </a>
+      
+            <!-- Instagram -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="bi bi-instagram"></i>
+            </a>
+      
+            <!-- Linkedin -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="bi bi-linkedin"></i>
+            </a>
+            <!-- Github -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="bi bi-github"></i>
+            </a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center text-light p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2023 Copyright: 
+          <a class="text-light" href="https://griebels.github.io">Sarah Griebel</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
     </div>
-    <!-- Copyright -->
-  </footer>
-</div>
-  </body>
-</html>
+      </body>
+    </html>

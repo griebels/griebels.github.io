@@ -1,0 +1,19 @@
+{
+    "gradSchool":
+    [
+        {"university": "Berkeley",
+        "program": "Information Science",
+        "city": "Berkeley",
+        "state": "California"
+    },
+        {"university": "Cornell",
+        "program": "Information Science",
+        "city": "Ithaca",
+        "state": "New York"
+    },
+        {"university": "UIUC",
+        "program": "Information Sciences",
+        "city": "Urbana-Champaign",
+        "state": "Illinois"}
+    ]
+}

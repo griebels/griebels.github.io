@@ -17,46 +17,75 @@
      -->
      <link rel="stylesheet" href="css/mystyles.css">
      <script src="js/myJS.js"></script>
+
+         <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
 </head>
 <body>
+    <!-- wrappers for footer to stay in place -->
+    <div id="page-container">
+      <div id="content-wrap">
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-    <div class="container">
-      <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+  <div class="container">
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+        <li class="nav-item">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">About</a>
-          </li>
-          <li class="nav-item">
-            <!-- <a class="nav-link" href="#">cv</a> -->
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              projects
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="index01.html" target="_blank">A sandbox for buttons</a></li>
-              <!-- <li><a class="dropdown-item" href="index02.html" target="_blank">A sandbox for drop-case letters</a></li> -->
-              <!-- <li><hr class="dropdown-divider"></li> -->
-              <li><a class="dropdown-item" href="index03.html" target="_blank">Translations, machine learning, and other cool things</a></li>
-              <li><a class="dropdown-item" href="index04.html" target="_blank">Some movies I've seen this year</a></li>
-            </ul>
+            <a class="nav-link active" aria-current="page" style="font-weight: 700;" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
-          </li>
-        </ul>
-        <form class="d-flex">
-          <!-- <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search"> -->
-          <!-- <button class="btn btn-outline-light" type="submit">Search</button> -->
-        </form>
-      </div>
+          <a class="nav-link active" aria-current="page" href="index05.html">About</a>
+        </li>
+        <li class="nav-item">
+          <!-- <a class="nav-link" href="#">cv</a> -->
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            DIGS 30005
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="index01.html" target="_blank">Sandbox</a></li>
+            <li><a class="dropdown-item" href="index06.html" target="_blank">API</a></li>
+            <!-- <li><hr class="dropdown-divider"></li> -->
+            <!-- <li><a class="dropdown-item" href="index03.html" target="_blank">Translation, machine learning, and other cool things</a></li> -->
+            <!-- <li><a class="dropdown-item" href="index04.html" target="_blank">Some movies I've seen this year</a></li> -->
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Translation
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="index03.html" target="_blank">Translation</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Movies
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="index04.html" target="_blank">What I'm watching</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
+        </li>
+      </ul>
+      <form class="d-flex">
+        <!-- <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search"> -->
+        <!-- <button class="btn btn-outline-light" type="submit">Search</button> -->
+      </form>
     </div>
-  </nav>
+  </div>
+</nav>
+
 
   <div class="container mt-3">
     <h1>Sandbox Site for Practice</h1>
@@ -87,15 +116,121 @@
   <h2 id="named2">Poof</h2>
 </div>
 
-  <div class="container mt-5">
-  <h3>Drop-case letters</h3>
-
-
-<p>
-  <span class="firstcharacter">L</span>
-  orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-</p>
-
+<div class="container mt-4">
+  <h3>Columns with text using drop-case lettering</h3>
 </div>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-sm p-3">
+      <span class="firstcharacter">L</span>
+      orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div>
+    <div class="col-sm p-3">
+      <span class="firstcharacter">C</span>
+      ontrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+    </div>
+    <div class="col-sm p-3">  
+      <span class="firstcharacter">I</span>
+      t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).    </div>
+    <div class="col-sm p-3">  
+      <span class="firstcharacter">T</span>
+      here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.    
+  </div>
+</div>
+
+<div class="container mt-4">
+  <h3>Simple alert button and another with a little bit more</h3>
+
+<button type="button" class="btn btn-secondary" onclick="simple_thing()">Pop!</button>
+<button type="button" class="btn btn-success" onclick="bike_ride()">Should I ride a bike?</button>
+</div>
+
+<div class="container mt-4">
+  <h3>Buttons with parameters</h3>
+<button type="button" class="btn btn-secondary" onclick="functionS()">Run a simple function with a parameter</button>
+</div>
+
+<div class="container mt-4">
+  <h3>Button for parsing an array</h3>
+  <button type="button" class="btn btn-secondary" onclick="ParseArray()">Parse an array</button>
+</div>
+
+<!-- Container before footer -->
+<div class="container mt-5">
+</div>
+
+<!-- Footer!! -->
+</div>
+<footer id="footer">
+  <footer class="text-center text-white" style="background-color: rgb(240, 218, 209);">
+    <!-- Grid container -->
+    <div class="container pt-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="bi bi-facebook"></i>            
+        </a>
+  
+        <!-- Twitter -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="bi bi-twitter"></i>
+        </a>
+  
+        <!-- Google -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="bi bi-google"></i>
+        </a>
+  
+        <!-- Instagram -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="bi bi-instagram"></i>
+        </a>
+  
+        <!-- Linkedin -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="bi bi-linkedin"></i>
+        </a>
+        <!-- Github -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="bi bi-github"></i>
+        </a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2023 Copyright: 
+      <a class="text-dark" href="https://griebels.github.io">Sarah Griebel</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
   </body>
 </html>
