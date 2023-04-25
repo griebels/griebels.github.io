@@ -87,16 +87,17 @@ function mapLoad(){
     map.on('click', onMapClick);
   }
 
-  function functionS(numbers) {
+  function ParamArray(numbers) {
     var numbers = [1, 4, 5, 9]
-    for (let i = 1; i < numbers.length; i++)
+    for (let i = 0; i < numbers.length; i++)
     console.log(numbers[i]);
+    document.getElementById('numbers').innerHTML = "Here's the array: " + numbers;
   };
   
   
 
 
-  function ParseArray() {
+  function parseArray() {
     var schools = {
         "gradSchool":
     [
@@ -118,6 +119,20 @@ function mapLoad(){
     };
     var grads = schools.gradSchool;
     for (i in grads) {console.log(grads[i].program)}
+  }
+
+
+  //Function that asks for an array input and then sorts that input
+  function sortArray() {
+    var trans1 = document.getElementById('trans1').value;
+    var trans2 = document.getElementById('trans2').value;
+    var trans3 = document.getElementById('trans3').value;
+    
+    var output0 = [trans1, trans2, trans3];
+    document.getElementById('output0').innerHTML = "Here's what you entered: " + output0.join(", ");
+
+    var output2 = output0.slice().sort()
+    document.getElementById('output2').innerHTML = "This probably isn't very useful, but here are your words sorted alphabetically :) " + output2.join(", ");
   }
 
   
