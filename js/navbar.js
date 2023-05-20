@@ -1,1 +1,1 @@
-$(function() {$("#navbar-placeholder").load("navbar.html");});
+$(function() {$("#navbar-placeholder").load("griebels.github.io/navbar.html");});
