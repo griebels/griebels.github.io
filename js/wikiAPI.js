@@ -47,5 +47,5 @@ connect.onload = function () {
 //Send the API request to the server
 connect.send();
 
-//super challenge
+
 }
