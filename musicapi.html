@@ -24,9 +24,9 @@
     <link rel="stylesheet" href="css/mystyles.css">
     <script src="js/myJS.js"></script>
 
-    
-
-
+    <!-- Loading JS file that includes the musicAPI function -->
+    <script src="js/musicAPI.js"></script>
+   
     <!-- Bootstrap Icons CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
     
@@ -34,5 +34,43 @@
 <body>
     <div id="navbar-placeholder"></div>
     <script src="js/navbar.js"></script>
+
+    <div class="container mt-3">
+        <h3 id="title">Music API example</h3>
+        <!-- user input field -->
+        <form>
+            <div class="row">
+            <div class="col">
+                <input id="searchTerm" type="text" class="form-control" placeholder="Enter your search term.">
+            </div>
+            </div>
+        </form>
+        <div class="container d-none" id="tableContainer">
+            <p id="artistName" class="h2"></p>
+            <table id="tableOutput" class="table">
+              <thead>
+                <tr>
+                  <th>Release date</th>
+                  <th>Title</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody">
+              </tbody>
+            </table>
+          </div>
+        
+        <!-- Button to submit search value and invoke js functions -->
+        <button type="submit" class="button btn-secondary my-3" onclick="musicAPI()">Search</button>
+        
+        <!-- output from the js function loads here -->
+            <div class="container" id="music"></div>
+        </div>
+    
+    
+        <div class="container mt-4">
+            <div>
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
 </body>
 </html>
