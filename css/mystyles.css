@@ -3,7 +3,7 @@ body {
 }
 
 h1 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20pt;
     color: rgb(87, 86, 86)
 }
@@ -54,6 +54,7 @@ td {
     bottom: 0;
     width: 100%;
     height: 2.5rem;            /* Footer height */
+    font-family:Georgia, 'Times New Roman', Times, serif !important;
   }
 
   .carousel-control-next-icon {
@@ -67,4 +68,9 @@ td {
   #map { 
     height: 400px; 
     width: 100%;
+}
+
+.navbar { 
+  font-family:Georgia, 'Times New Roman', Times, serif !important; 
+  font-size: 16pt !important;
 }
