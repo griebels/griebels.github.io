@@ -3,7 +3,7 @@ body {
 }
 
 h1 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Merriweather', serif;
     font-size: 20pt;
     color: rgb(87, 86, 86)
 }
@@ -15,8 +15,17 @@ h3 {font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 p {
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    color: rgb(59, 38, 38)
+    font-family:'Merriweather', serif;
+    font-size: 14pt;
+    color: rgb(59, 38, 38);
+    margin:0
+}
+
+.aboutpara {
+  font-family:'Merriweather', serif;
+  font-size: 14pt;
+  color: rgb(59, 38, 38);
+  margin-bottom:15px;
 }
 
 th {
@@ -50,6 +59,7 @@ td {
   }
   
   #footer {
+    font-family:'Montserrat', sans-serif !important; 
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -70,6 +80,10 @@ td {
 }
 
   .navbar { 
-    font-family:Georgia, 'Times New Roman', Times, serif !important; 
-    font-size: 16pt !important;
+    font-family:'Montserrat', sans-serif !important; 
+    font-size: 20pt !important;
+    li{
+      padding-left:15px;
+      padding-right:15px;
+    };
 }
